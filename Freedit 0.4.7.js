@@ -167,9 +167,7 @@ for (var i = 0; i < konec; i++) {
   var b1x = x - zx[zoom]; var b1y = y + zy[zoom]; var b2x = x + zx[zoom]; var b3y = y - zy[zoom];   
 
 var Freedit01 = [{lon:b1x,lat:b1y},{lon:b2x,lat:b1y},{lon:b2x,lat:b3y},{lon:b1x,lat:b3y}];
-    //aktuality - pokud je editor vypiš jmeno, pokud není tady muze byt tvoje jmeno
-    // pokud stav 0 ( tady muze byt tvoje jmeno) 1 jmeno editora 2 jmeno editora a 'ke kontrole' 3 hotovo (editoval) 4 editor + chyba čti forum/rozcestník
-    //if(FEeditor[i] !== "") {} else { FEeditor[i] = ' tady může být tvoje jméno ';}
+
     var FEinfo = '';
     if(FEstav[i] == 0) {FEinfo = '\n Tento Freedit je VOLNÝ \n zbývá : ' + FEvyprsi[i] + ' dnů' + '\n' + FEatributy[i] + ' viz záložka «';}
     if(FEstav[i] == 1) {FEinfo = '\n edituje : ' + FEeditor[i] + '\n zbývá : ' + FEvyprsi[i] + ' dnů' + '\n' + FEatributy[i] + ' viz záložka «';}
@@ -281,7 +279,7 @@ function freedit_init()
     addon.innerHTML += '<font size="1"><br>Legenda: <i><a href="https://www.waze.com/forum/viewtopic.php?f=22&t=136397" target="_blank"> (Script Freedit L1+ verze ' + fe_verze + ')</a></i></font>';
     addon.innerHTML += '<font size="1"><br>G - oprava geometrie <br> K - kreslit nové uličky / parkoviště / areály <br> O - kontrola odbočení / jednosměrek <br> N - kontrola názvu ulic / obce</font>'; //vytvoří odkaz v tabu a připojí proměnnou
     
-    var userTabs = getId('user-info');
+  var userTabs = getId('user-info');
 	var navTabs = getElementsByClassName('nav-tabs', userTabs)[0];
 	var tabContent = getElementsByClassName('tab-content', userTabs)[0];
 
