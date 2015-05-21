@@ -244,7 +244,7 @@ function freedit_init()
     addon.innerHTML += '<br><br>';
     addon.innerHTML += '<b>Horké tipy: </b><i><font size="1">(vyprší za:)</font></i><br>';
     var hf = 0;
-    for (var h = 0; h < konec; h++)
+    for (var h = 0; h < konec; h++) {
         if (hf < 7) {
             hf = hf++;
             if (FEvyprsi[h] < 21 && FEvyprsi[h] > 0) {
@@ -253,7 +253,7 @@ function freedit_init()
             }
             }
        } 
-    
+    }
     addon.innerHTML += '<br><b>Edituje se: </b><i><font size="1"></font></i><br>';
     for (var h = 0; h < konec; h++) {
         if (FEstav[h] == "1") {
